@@ -54,12 +54,14 @@
                         <form class="form-inline my-2 my-lg-0">
                             <div class="flex-row">
                                 <div class="input-group">
-                                    <input type="text" style="width:400px;" class="form-control"
+                                <form action="{{ route('products.search') }}" method="GET">
+                                    <input  type="text" id="keyword" name="keyword" class="search-auto form-control" style="width:400px;"
                                         placeholder="Nhập từ khóa...">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary  text-white" type="button"
+                                        <button class="btn btn-outline-secondary  text-white" type="submit"
                                             style="background-color:#DD0000;">Tìm kiếm</button>
                                     </div>
+</form>
                                 </div>
                             </div>
                         </form>
@@ -134,7 +136,7 @@
                         @foreach($category_1 as $cat1)
                             <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle rounded" href="/category1/{{$cat1->id}}" id="navbarDropdown1-1" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {{$cat1->tittle}}
                                     </a>
                                 @if($cat1->Category1Childrent->count())

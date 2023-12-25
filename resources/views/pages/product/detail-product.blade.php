@@ -13,13 +13,13 @@
         <div class="container-fluid ">
             <div class="row justify-content-center">
                 <!-- Card Sản phẩm 1 -->
-                @foreach($product as $pro)
+
                 <div class="col-md-2">
                     <div class="card">
-                        <a href="/detail-product/{{$pro->link}}">
+                        <a href="/detail-product/{{$detail->link}}">
                         <img  src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1"></a>
                         <div class="card-body p-2">
-                            <b class="card-title">{{$pro->tittle}}</b>
+                            <b class="card-title">{{$detail->tittle}}</b>
                             <h6 class="text-primary">Tên Hãng SP</h6>
 
                             <div class="row justify-content-center">
@@ -30,9 +30,9 @@
                                         75,000 vnđ</p>
                                 </div>
                                 <div class="col">
-                                    <form method="post" action="{{ route('cart.add', $pro->id) }}">
+                                    <form method="post" action="{{ route('cart.add', $detail->id) }}">
                                         @csrf
-                                        <input type="hidden" name="products_id" value="{{ $pro->id }}">
+                                        <input type="hidden" name="products_id" value="{{ $detail->id }}">
                                         <button type="submit" class="btn btn-danger mt-auto add-to-cart-btn" data-product-id="1">Add to Cart</button>
                                     </form>
                                 </div>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+ 
 
 
 

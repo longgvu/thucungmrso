@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category_1;
 use App\Models\Category_2;
-
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -17,10 +17,13 @@ class PageController extends Controller
     {
         $user = Session::get('user'); // Lấy thông tin người dùng từ Session
 $cart = Session::get('cart', []);
-        $products = Product::all();
+$banner = Banner::all();
+$new = Product::orderBy('created_at', 'desc')->take(5)->get();
+        $fordog = Product::where('category_1_id',2)->take(8)->get();
+        $forcat = Product::where('category_1_id',3)->take(8)->get();
         $category_1 = Category_1::all();
         $category_2 = Category_1::all();
-        return view('pages.home', compact('products','user','cart','category_1','category_2'));
+        return view('pages.home', compact('new', 'fordog','forcat','user','cart','category_1','category_2','banner'));
     }
 
     public function addToCart(Request $request, Product $product)
