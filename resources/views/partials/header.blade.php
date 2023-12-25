@@ -133,14 +133,14 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                         @foreach($category_1 as $cat1)
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle rounded" href="{{$cat1->link}}" id="navbarDropdown1-1" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{$cat1->tittle}}
-                                </a>
+                                    <a class="dropdown-item dropdown-toggle rounded" href="/category1/{{$cat1->id}}" id="navbarDropdown1-1" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{$cat1->tittle}}
+                                    </a>
                                 @if($cat1->Category1Childrent->count())
                                 <ul class="dropdown-menu-1-1 rounded" aria-labelledby="navbarDropdown1-1">
                                 @foreach($cat1->Category1Childrent as $cat2)
-                                    <li><a class="dropdown-item rounded" href="{{$cat2->link}}">{{$cat2->tittle}}</a></li>
+                                    <li><a class="dropdown-item rounded" href="/category2/{{$cat2->id}}">{{$cat2->tittle}}</a></li>
                                     
                                 @endforeach
                                 </ul>

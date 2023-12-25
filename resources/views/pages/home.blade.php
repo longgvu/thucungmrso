@@ -9,7 +9,7 @@
 @section('content')
 <div class="pet-banner">
     <!-- Hình ảnh thú cưng -->
-    <img src="{{ URL::asset('images/banner2.jpg') }}" alt="Pet Image" class="pet-image">
+    <img src="{{ URL::asset('images/banner2.jpeg') }}" alt="Pet Image" class="pet-image">
 
     <!-- Nội dung bên trong banner -->
     <div class="overlay">

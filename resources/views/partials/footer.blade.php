@@ -19,9 +19,12 @@
                 <h5>CHÍNH SÁCH</h5>
 
                 <ul class="list-inline">
-                    <li><a class="text-white" href="/">Hướng dẫn mua hàng</a> </li>
-                    <li><a class="text-white" href=""> Chính sách đổi trả</a></li>
-                    <li><a class="text-white" href="">Chính sách sao hàng</a> </li>
+                    <li><a class="text-white" href="shopguide">Hỗ trợ đặt hàng</a> </li>
+                    <li><a class="text-white" href="returnpolicy"> Chính sách đổi trả</a></li>
+                    <li><a class="text-white" href="warrantypolicy">Chính sách bảo hành</a> </li>
+                    <li><a class="text-white" href="privacypolicy">Chính sách bảo mật thông tin</a> </li>
+                    <li><a class="text-white" href="paymentpolicy">Chính sách thanh toán</a> </li>
+                    
                 </ul>
                 <ul class="list-inline">
                     <div class="row">
