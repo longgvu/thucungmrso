@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* Màu nền của header */
+    /* Màu chữ của header */
+}
+
+.logo-container {
+    z-index: 2;
+    /* Đảm bảo logo ở trên cùng */
+}
+
+.logo {
+    width: 100px;
+    /* Điều chỉnh kích thước của logo */
+    height: auto;
+}
+
+.main-menu {
+    z-index: 1;
+    /* Đảm bảo menu ở dưới cùng */
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu ul li {
+    margin-right: 20px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* Màu chữ của menu */
+}
+
+
+/* Tùy chỉnh style cho menu */
+
+.menu-container {
+    background-color: #f8f9fa;
+    /* màu nền của menu */
+    padding: 10px;
+    /* thêm padding cho menu */
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.address-container {
+    color: rgb(142, 140, 140);
+}
+
+.full-screen-banner {
+    width: 100%;
+    height: 100vh;
+    /* Chiều cao là 100% của viewport height */
+    background-image: url('your-banner-image.jpg');
+    /* Đường dẫn đến hình nền của banner */
+    background-size: cover;
+    /* Hiển thị hình nền theo kích thước của banner */
+    background-position: center;
+    /* Chính giữa hình nền */
+    color: #fff;
+    /* Màu chữ trắng */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-banner {
+    width: 100%;
+    height: 100vh;
+    /* Chiều cao là 100% của viewport height */
+    background-image: url('');
+    /* Đường dẫn đến hình nền của banner */
+    background-size: cover;
+    /* Hiển thị hình nền theo kích thước của banner */
+    background-position: center;
+    /* Chính giữa hình nền */
+    color: #fff;
+    /* Màu chữ trắng */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Tùy chỉnh style cho tiêu đề và mô tả */
+
+.banner-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+}
