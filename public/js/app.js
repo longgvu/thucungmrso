@@ -1,4 +1,5 @@
 import './bootstrap';
+
 document.addEventListener("DOMContentLoaded", function() {
     const avatars = document.querySelectorAll(".avatar");
     let currentAvatarIndex = 0;
@@ -16,4 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Tự động chuyển đổi avatar sau mỗi khoảng thời gian (ví dụ: 5 giây)
     setInterval(showNextAvatar, 5000);
+
+
+});
+window.$ = window.jQuery = require('jquery');
+require('bootstrap');
+require('slick-carousel');
+$(document).ready(function() {
+    $('#avatarSlider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
 });

@@ -206,7 +206,7 @@
             </div>
             <div class="col-md-8">
                 <div class="row justify-content-center">
-                @foreach($forcat as $fc)
+                    @foreach($forcat as $fc)
                     <div class="col-md-3 p-2">
                         <div class="card">
                             <img src="{{ URL::asset('images/'. $fc->image)}}" class="card-img-top p-2" alt="Sản phẩm 1">
@@ -232,8 +232,8 @@
                     @endforeach
 
                 </div>
-            <div>
-        </div>
+                <div>
+                </div>
     </section>
 
     <!-- section banner -->
@@ -300,11 +300,12 @@
             </div>
             <div class="col-md-8">
                 <div class="row justify-content-center">
+                    @foreach($forrice as $fr)
                     <div class="col-md-3 p-2">
                         <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
+                            <img src="{{ URL::asset('images/'. $fr->image)}}" class="card-img-top p-2" alt="Sản phẩm 1">
                             <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
+                                <b class="card-title">{{$fr -> tittle}}</b>
                                 <h6 class="text-primary">Tên Hãng SP</h6>
 
                                 <div class="row justify-content-center">
@@ -322,160 +323,8 @@
                         </div>
 
                     </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
+                    @endforeach
 
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 p-2">
-                        <div class="card">
-                            <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                            <div class="card-body p-2">
-                                <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                                <h6 class="text-primary">Tên Hãng SP</h6>
-
-                                <div class="row justify-content-center">
-                                    <div class="col">
-                                        <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
-                                                vnđ</s></p>
-                                        <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                            75,000 vnđ</p>
-                                    </div>
-                                    <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
                     <!--  -->
                 </div>
             </div>
@@ -502,19 +351,22 @@
         <div class="container-fluid p-4">
             <div class="row justify-content-center">
                 <!-- Card Sản phẩm 1 -->
+                @foreach($forfarm as $ff)
                 <div class="col-md-2">
                     <div class="card">
-                        <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
+                        <img src="{{ URL::asset('images/'. $ff->image)}}" class="card-img-top p-2"
+                            alt="{{$ff->tittle}}">
                         <div class="card-body p-2">
-                            <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
+                            <b class="card-title">{{$ff->tittle}}</b>
                             <h6 class="text-primary">Tên Hãng SP</h6>
 
                             <div class="row justify-content-center">
                                 <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
+                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>{{$ff->old_price}}
+                                            vnđ</s>
                                     </p>
                                     <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                        75,000 vnđ</p>
+                                        {{$ff->new_price}} vnđ</p>
                                 </div>
                                 <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
                             </div>
@@ -523,92 +375,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Card Sản phẩm 2 -->
-                <div class="col-md-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                        <div class="card-body p-2">
-                            <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                            <h6 class="text-primary">Tên Hãng SP</h6>
-
-                            <div class="row justify-content-center">
-                                <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
-                                    </p>
-                                    <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                        75,000 vnđ</p>
-                                </div>
-                                <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Sản phẩm 3 -->
-                <div class="col-md-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                        <div class="card-body p-2">
-                            <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                            <h6 class="text-primary">Tên Hãng SP</h6>
-
-                            <div class="row justify-content-center">
-                                <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
-                                    </p>
-                                    <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                        75,000 vnđ</p>
-                                </div>
-                                <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Sản phẩm 4 -->
-                <div class="col-md-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                        <div class="card-body p-2">
-                            <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                            <h6 class="text-primary">Tên Hãng SP</h6>
-
-                            <div class="row justify-content-center">
-                                <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
-                                    </p>
-                                    <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                        75,000 vnđ</p>
-                                </div>
-                                <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Sản phẩm 5 -->
-                <div class="col-md-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('images/sanpham.jpg')}}" class="card-img-top p-2" alt="Sản phẩm 1">
-                        <div class="card-body p-2">
-                            <b class="card-title">Balo Phi Hành Gia Vận Chuyển Chó Mèo</b>
-                            <h6 class="text-primary">Tên Hãng SP</h6>
-
-                            <div class="row justify-content-center">
-                                <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
-                                    </p>
-                                    <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
-                                        75,000 vnđ</p>
-                                </div>
-                                <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <!--  -->
                 <!-- Thêm các card sản phẩm khác tương tự -->
             </div>
@@ -702,33 +469,20 @@
                         <p>Lorem chỉ đơn giản là một đoạn văn giả</p>
                     </div>
                     <!--  -->
+                    @foreach($blog as $bl)
                     <div class="blog-post row pb-2">
                         <div class="col-5">
-                            <img src="{{URL::asset('images/dog.jpg')}}" alt="Blog Post Image"
+                            <img src="{{URL::asset('images/'. $bl->image)}}" alt="Blog Post Image"
                                 class="img-fluid w-100 p-1">
                         </div>
                         <div class="col-7">
                             <div class="blog-post-content">
-                                <h3>Blog Post Title 1</h3>
-                                <p>This is the content of the blog post. You can add text, images, and other
-                                    elements here.</p>
+                                <h3>{{$bl->tittle}}</h3>
+                                <p>{{$bl->description}}</p>
                             </div>
                         </div>
                     </div>
-                    <!--  -->
-                    <div class="blog-post row pb-2">
-                        <div class="col-5">
-                            <img src="{{URL::asset('images/dog.jpg')}}" alt="Blog Post Image"
-                                class="img-fluid w-100 p-1">
-                        </div>
-                        <div class="col-7">
-                            <div class="blog-post-content">
-                                <h3>Blog Post Title 1</h3>
-                                <p>This is the content of the blog post. You can add text, images, and other
-                                    elements here.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                     <!--  -->
 
                 </div>
@@ -741,10 +495,12 @@
                     </div>
                     <div class="container bg-warning">
                         <!--  -->
-                        <div class="owl-carousel">
-                            <div class="item"><img src="{{URL::asset('images/kh.jpg')}}" alt="Avatar 1"></div>
-                            <div class="item"><img src="path/to/avatar2.jpg" alt="Avatar 2"></div>
-                            <!-- Thêm các item khác nếu cần -->
+                        <div id="avatarSlider" class="slick-slider">
+                            @foreach($user_comment as $uc)
+                            <div class="avatar-item">
+                                <img src="{{URL::asset('images/' .$uc->image) }}" alt="Avatar" class="rounded-circle img-fluid">
+                            </div>
+                            @endforeach
                         </div>
                         <!--  -->
                     </div>
@@ -752,7 +508,14 @@
             </div>
         </div>
     </section>
-
+<script>$(document).ready(function() {
+    $('#avatarSlider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});</script>
     <section class="container-fluid justify-content-center d-flex align-items-center p-5 mt-5 video">
         <div class="row justify-content-center">
             <div class="col-md-3 p-3">

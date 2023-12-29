@@ -48,4 +48,7 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cart::class);
     }
+    public function Comment(){
+        return $this->hasmany(Comment::class, 'user_id');
+    }
 }

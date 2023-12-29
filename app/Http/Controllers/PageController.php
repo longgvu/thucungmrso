@@ -5,6 +5,11 @@ use App\Models\Product;
 use App\Models\Category_1;
 use App\Models\Category_2;
 use App\Models\Banner;
+use App\Models\User;
+
+use App\Models\Blog;
+use App\Models\Comment;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -21,9 +26,14 @@ $banner = Banner::all();
 $new = Product::orderBy('created_at', 'desc')->take(5)->get();
         $fordog = Product::where('category_1_id',2)->take(8)->get();
         $forcat = Product::where('category_1_id',3)->take(8)->get();
+        $forrice = Product::where('category_1_id',6)->take(8)->get();
+        $forfarm = Product::where('category_1_id', 5)->take(5)->get();
+        $user_comment = User::all();
         $category_1 = Category_1::all();
         $category_2 = Category_1::all();
-        return view('pages.home', compact('new', 'fordog','forcat','user','cart','category_1','category_2','banner'));
+        $comment = Comment::all();
+        $blog = Blog::all()->take(2);
+        return view('pages.home', compact('new', 'fordog','forcat','forrice','forfarm','user','cart','category_1','category_2','banner','blog','comment','user_comment'));
     }
 
     public function addToCart(Request $request, Product $product)

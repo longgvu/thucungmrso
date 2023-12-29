@@ -19,6 +19,7 @@ class category_1 extends Seeder
                 ['tittle' => 'SHOP CHO MÈO','link' => 'shop-cho-meo', 'description' => 'bán đồ ăn, phụ kiện cho mèo'],
                 ['tittle' => 'SHOP CHO CHIM','link' => 'shop-cho-chim', 'description' => 'bán đồ ăn, phụ kiện cho chim'],
                 ['tittle' => 'VẬT TƯ NÔNG NGHIỆP','link' => 'vat-tu-nong-nghiep', 'description' => 'bán vật dụng, vật tư nông nghiệp'],
+                ['tittle' => 'SẢN PHẨM LÚA GẠO','link' => 'san-pham-lua-gao', 'description' => 'bán sản phẩm lúa gạo các loại'],
                 // Thêm các danh mục khác nếu cần
             ];
     

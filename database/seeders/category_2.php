@@ -33,6 +33,9 @@ class category_2 extends Seeder
             ['tittle' => 'Chậu cây trồng', 'link' => 'chau-cay-trong', 'description' => 'bán các loại chậu cây trồng', 'category_1_id' => '5'],
             ['tittle' => 'Phân bón', 'link' => 'phan-bon', 'description' => 'bán phân bón trồng trọt','category_1_id' => '5'],
             ['tittle' => 'Đất trồng trọt', 'link' => 'dat-trong-trot', 'description' => 'Bán đất trồng trọt','category_1_id' => '5'],
+
+            ['tittle' => 'Gạo', 'link' => 'gao', 'description' => 'Bán gạo','category_1_id' => '6'],
+            ['tittle' => 'Nếp', 'link' => 'nep', 'description' => 'Bán nếp','category_1_id' => '6'],
         ];
 
         // Thêm dữ liệu vào bảng categories
