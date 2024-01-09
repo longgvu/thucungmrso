@@ -14,4 +14,7 @@ class Category_2 extends Model
         'link',
         'description',
     ];
+    public function Category2Childrent(){
+        return $this->hasmany(Product::class, 'category_2_id');
+    }
 }

@@ -21,17 +21,16 @@ public function showLoginForm()
 
 public function login(Request $request)
 {
-    
-    $email = $request->input('email');
-    $password = $request->input('password');
+    $credentials = $request->only('email', 'password');
+    // $email = $request->input('email');
+    // $password = $request->input('password');
 
     // Tìm người dùng trong cơ sở dữ liệu bằng email
-    $user = User::where('email', $email)->first();
-$plainPassword = 'vu123456';
-$hashedPassword = Hash::make($plainPassword);
-    $credentials = $request->only('email', 'password');
+    // $user = User::where('email', $email)->first();
 
-    if (Hash::check($plainPassword, $hashedPassword)) {
+    // $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
         
         Auth::login($user);
 

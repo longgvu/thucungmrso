@@ -23,12 +23,27 @@
     <div class="swiper-button-prev"></div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
+<!-- Initialize Swiper -->    <script>
+
+</script>
+<!-- <script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+</script> -->
 <script>
     var swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
         loop: true, // Enable looping
+        speed:1000,
 
         // Navigation arrows
         navigation: {
@@ -44,7 +59,7 @@
 
         // Autoplay
         autoplay: {
-            delay: 5000, // Delay between transitions in milliseconds (5 seconds in this example)
+            delay: 3000, // Delay between transitions in milliseconds (5 seconds in this example)
             disableOnInteraction: false, // Enable autoplay even if the user interacts with the swiper
         },
     });

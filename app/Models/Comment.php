@@ -12,5 +12,7 @@ class Comment extends Model
         'id',
         'content',
     ];
-    
+    public function comment(){
+        return this->belongsto(User::class,'user_id','id');
+    }
 }

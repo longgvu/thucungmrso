@@ -8,11 +8,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function __construct()
-    {
-        // Apply authentication middleware except for the 'index' method
-        $this->middleware('auth')->except('index');
-    }
+
 
     public function index()
     {
@@ -21,25 +17,14 @@ class ProductController extends Controller
     }
     public function detail($link){
         $category_1 = Category_1::all();
-        $category_2 = Category_1::all();
-        $detail = Product::where('link',$link)->firstOrFail();;
-        return view('pages.product.detail-product', compact('detail','category_1','category_2'));
+        $category_2 = Category_2::all();
+        $detail = Product::where('link',$link)->firstOrFail();
+        $cungloai = $detail->category_1_id;
+        $productId = $detail->id;
+        $spcungloai = Product::where('category_1_id',$cungloai)->where('id', '!=', $productId)->get();
+        return view('pages.product.detail-product', compact('detail','category_1','category_2','spcungloai'));
     }
-    public function addToCart(Request $request, Product $product)
-    {
-        // Ensure the user is authenticated
-        if (!auth()->check()) {
-            return redirect()->route('login')->with('error', 'Please log in to add items to your cart.');
-        }
 
-        // Get the user's cart
-        $cart = auth()->user()->cart;
-
-        // Attach the product to the cart
-        $cart->products()->attach($product);
-
-        return redirect()->route('products.index')->with('success', 'Product added to cart');
-    }
 
 
 }

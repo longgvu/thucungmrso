@@ -7,6 +7,8 @@ use App\Http\Controllers\IntroduceController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +25,14 @@ Route::get('/', [PageController::class, 'index']);
 Route::get('/index', function () {
     return view('index');
 });
-Route::get('/products/search', [SearchController::class],'search')->name('products.search');
+Route::get('/home', [PageController::class, 'index'])->name('pages.home');
+
+
+Route::get('/search', [SearchController::class,'search'])->name('products.search');
 Route::get('introduce', [PageController::class, 'introduce']);
 Route::get('service', [PageController::class, 'service']);
 Route::get('blog', [PageController::class, 'blog']);
+Route::get('doctin/{link}', [BlogController::class, 'detail']);
 Route::get('recruitment', [PageController::class, 'recruitment']);
 Route::get('contact', [PageController::class, 'contact']);
 Route::get('shopguide', [PageController::class, 'shopguide']);
@@ -34,17 +40,15 @@ Route::get('returnpolicy', [PageController::class, 'returnpolicy']);
 Route::get('warrantypolicy', [PageController::class, 'warrantypolicy']);
 Route::get('privacypolicy', [PageController::class, 'privacypolicy']);
 Route::get('paymentpolicy', [PageController::class, 'paymentpolicy']);
-
+Route::get('san-pham', [PageController::class,'product']);
 Route::get('category1/{id}', [PageController::class, 'category1']);
 Route::get('category2/{id}', [PageController::class, 'category2']);
 
-Route::get('detail-product/{link}', [ProductController::class, 'detail']);
+Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware(['auth', 'verified'])->name('cart.add');
 
-Route::middleware(['auth'])->group(function () { 
-    // Các routes mà người dùng cần phải đăng nhập để truy cập
-    Route::post('/cart/add/{product}', [CartController::class, 'addToCart'])->name('cart.add');
-    
-});
+Route::get('/{link}', [ProductController::class, 'detail']);
+Route::get('cart', [CartController::class, 'index'])->middleware(['auth', 'verified'])->name('cart');;
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

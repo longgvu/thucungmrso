@@ -7,25 +7,29 @@
 @endsection
 
 @section('content')
-<div class="container mt-5">
+
+    <div class="container mt-3 mb-3">
         <div class="row">
-            <div class="col-md-8">
-                <h1>TIN TỨC</h1>
-                <p>
-                    We offer a wide range of pet supplies, including food, accessories, and more.
-                    Our mission is to provide the best products for your furry friends.
-                </p>
-                <p>
-                    Explore our website to find high-quality items for your pets. If you have any
-                    questions, feel free to contact our friendly team.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta incidunt dolor quis. Fugiat provident recusandae deleniti, illum architecto minima expedita omnis, sunt pariatur ex magni? Delectus provident numquam beatae itaque.</p>
+            <!-- Tin 1 -->
+            @foreach($blog as $bl)
+            <div class="col-md-4 ">
+                <div class="card blog">
+                    <a href="doctin/{{$bl->link}}">
+                        <img src="{{URL::asset('images/'. $bl->image)}}" class="card-img-top" alt="{{$bl->tittle}}">
+                    </a>
+
+                    <div class="card-body " >
+                        <h6 class="card-title">{{$bl->tittle}}</h6>
+                        <p class="card-text" style=" flex-grow: 1;max-height: 3em; overflow: hidden;">{{$bl->description}}...</p>
+                        <p class="card-text"><small class="text-muted">Ngày đăng: 05/01/2024</small></p>
+                        <a href="doctin/{{$bl->link}}" class="btn btn-danger">Đọc tin</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="{{ asset('images/pets.jpg') }}" alt="Pets" class="img-fluid">
-            </div>
+            @endforeach
         </div>
     </div>
+
 @endsection
 
 @section('footer')

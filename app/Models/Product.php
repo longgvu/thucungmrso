@@ -12,4 +12,8 @@ class Product extends Model
     {
         return $this->belongsToMany(Cart::class);
     }
+    public function category2()
+    {
+        return $this->belongsTo(Category_2::class, 'category_2_id');
+    }
 }

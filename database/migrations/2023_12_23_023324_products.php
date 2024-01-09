@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tittle');
             $table->string('link');
             $table->text('description');
+            $table->string('content');
             $table->string('image');
             $table->string('brand');
             $table->string('old_price');

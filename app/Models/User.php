@@ -48,7 +48,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cart::class);
     }
-    public function Comment(){
+    public function UserChildrent(){
         return $this->hasmany(Comment::class, 'user_id');
+    }
+    public function cartItems(){
+        return $this->hasMany(Cart_Item::class,'user_id');
     }
 }

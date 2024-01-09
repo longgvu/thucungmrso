@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('tittle');
-            $table->string('link');
-            $table->string('description',1000);
-            $table->string('content',10000);
+            $table->unsignedBigInteger('user_id'); // ID người dùng liên kết
+                                                    // ID sản phẩm liên kết
+            $table->integer('quantity');
+            // Thêm các cột khác nếu cần
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

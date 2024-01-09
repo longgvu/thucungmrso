@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Session;
 
 class PageController extends Controller
 {
-    Public function home(){
+    public function home(){
         return view('pages.home');
     }
     public function index()
@@ -33,7 +33,8 @@ $new = Product::orderBy('created_at', 'desc')->take(5)->get();
         $category_2 = Category_1::all();
         $comment = Comment::all();
         $blog = Blog::all()->take(2);
-        return view('pages.home', compact('new', 'fordog','forcat','forrice','forfarm','user','cart','category_1','category_2','banner','blog','comment','user_comment'));
+        $products = Product::all();
+        return view('pages.home', compact('new', 'fordog','forcat','forrice','forfarm','user','cart','category_1','category_2','banner','blog','comment','user_comment','products'));
     }
 
     public function addToCart(Request $request, Product $product)
@@ -60,7 +61,8 @@ $new = Product::orderBy('created_at', 'desc')->take(5)->get();
     public function blog(){
         $category_1 = Category_1::all();
         $category_2 = Category_1::all();
-        return view('pages.blog', compact('category_1', 'category_2'));
+        $blog = Blog::all();
+        return view('pages.blog', compact('category_1', 'category_2','blog'));
     }
     public function recruitment(){
         $category_1 = Category_1::all();
@@ -108,5 +110,9 @@ $new = Product::orderBy('created_at', 'desc')->take(5)->get();
         $category_2 = Category_1::all();
         $product = Product::where('category_2_id',$id)->get();
         return view('pages.product', compact('category_1', 'category_2','product'));
+    }
+    public function product(){
+        $product = Product::all();
+        return view('pages.product',compact('product'));
     }
 }
