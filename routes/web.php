@@ -46,18 +46,19 @@ Route::get('category2/{id}', [PageController::class, 'category2']);
 
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware(['auth', 'verified'])->name('cart.add');
 
-Route::get('/{link}', [ProductController::class, 'detail']);
+
 Route::get('cart', [CartController::class, 'index'])->middleware(['auth', 'verified'])->name('cart');;
 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('login', [AuthenticatedSessionController::class, 'create'])
+->name('login');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+Route::get('/{link}', [ProductController::class, 'detail']);
 require __DIR__.'/auth.php';

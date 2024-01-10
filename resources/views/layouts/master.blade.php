@@ -85,7 +85,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&family=Pacifico&display=swap">
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V54KV8HC0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7V54KV8HC0');
+    </script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",

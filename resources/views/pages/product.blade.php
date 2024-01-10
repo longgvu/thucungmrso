@@ -15,28 +15,27 @@
                 <!-- Card Sản phẩm 1 -->
                 @foreach($product as $pro)
                 <div class="col-md-2 criteria">
-                    <div class="card ">
+                    <div class="card">
                         <a href="/{{$pro->link}}">
-                        <img  src="{{ URL::asset('images/'. $pro->image)}}" class="card-img-top p-2" alt="{{$pro->tittle}}"></a>
+                        <img src="{{ URL::asset('images/'. $pro->image)}}" class="card-img-top p-2" alt="{{$pro->tittle}}">
+                        </a>
                         <div class="card-body p-2">
                             <b class="card-title">{{$pro->tittle}}</b>
-                            @if($pro->category2()->count())
-                            <h6 class="text-primary">{{$pro->category2->tittle}}</h6>
-                            @endif
-                            <div class="row justify-content-center">
+
+
+                            <div class="row justify-content-center gr-button">
+                                @if($pro->category2()->count())
+
+                                <h6 class="text-primary">{{$pro->category2->tittle}}</h6>
+
+                                @endif
                                 <div class="col">
-                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000 vnđ</s>
-                                    </p>
+                                    <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
+                                            vnđ</s></p>
                                     <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
                                         75,000 vnđ</p>
                                 </div>
-                                <div class="col">
-                                    <form method="post" action="{{ route('cart.add', $pro->id) }}">
-                                        @csrf
-                                        <input type="hidden" name="products_id" value="{{ $pro->id }}">
-                                        <button type="submit" class="btn btn-danger mt-auto add-to-cart-btn" data-product-id="1">Add to Cart</button>
-                                    </form>
-                                </div>
+                                <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
                             </div>
 
 

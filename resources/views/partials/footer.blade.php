@@ -16,7 +16,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 justify-content-center">
+            <div class="col-md-3 justify-content-center pl-5">
                 <h5>CHÍNH SÁCH</h5>
 
                 <ul class="list-inline">
@@ -107,7 +107,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ URL::asset('js/app.js')}}"></script>
+    <script type="module" src="{{ URL::asset('js/app.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

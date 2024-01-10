@@ -55,7 +55,7 @@
             <div class="row justify-content-center">
                 <!-- Card Sản phẩm 1 -->
                 @foreach($new as $pro)
-                <div class="col-md-2 card-sp">
+                <div class="col-md-2 card-sp newproduct">
                     <div class="card">
                         <a href="/{{$pro->link}}">
                             <img src="{{ URL::asset('images/'. $pro->image)}}" class="card-img-top p-2" alt="Sản phẩm 1">
@@ -93,7 +93,7 @@
             <div class="row justify-content-center">
                 <!-- Card Sản phẩm 1 -->
                 @foreach($new as $pro)
-                <div class="col-md-2 card-sp">
+                <div class="col-md-2 card-sp newproduct">
                     <div class="card">
                         <a href="/{{$pro->link}}">
                             <img src="{{ URL::asset('images/'. $pro->image)}}" class="card-img-top p-2" alt="Sản phẩm 1">
@@ -238,7 +238,9 @@
                     @foreach($forcat as $fc)
                     <div class="col-md-3 p-2 card-sp">
                         <div class="card">
-                            <img src="{{ URL::asset('images/'. $fc->image)}}" class="card-img-top p-2" alt="Sản phẩm 1">
+                            <a href="/{{$fc->link}}">
+                            <img src="{{ URL::asset('images/'. $fc->image)}}" class="card-img-top p-2" alt="{{$fc->tittle}}">
+                            </a>
                             <div class="card-body p-2">
                                 <b class="card-title">{{$fc -> tittle}}</b>
 
@@ -266,8 +268,73 @@
                     @endforeach
 
                 </div>
-                <div>
+            </div>
                 </div>
+                <div class="row justify-content-center">
+                    <h2 class="title-main tc text-danger"><span><b> SHOP CHO GÀ </b></span></h2>
+                <p class="sltc">SHOP THÚ CƯNG MR SỌ chuyên thức ăn cho thú cưng, thuốc cho thú cưng, phụ kiện cho thú cưng</p>
+                    <div class="col-md-2 menu-left">
+                        <div class="bg-warning shopchochocho pb-5 mb-3">
+                            <div class="shopchocho p-1" style="background-color:#DD0000;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3">
+                                        <img src="{{ URL::asset('images/Hinh-icon-cho-Shiba.jpg')}}"
+                                            style="object-fit: cover;width:100%" class="rounded-circle" alt="Shop cho gà">
+                                    </div>
+                                    <div class="col-md-9 text-white">
+                                        <p class="mb-0">SHOP CHO GÀ</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <ul class="pt-3">
+                                <li><a href="">Thức ăn cho gà</a></li>
+                                <li><a href="">Thuốc cho gà</a></li>
+                                <li><a href="">Phụ kiện cho gà</a></li>
+                            </ul>
+
+                        </div>
+                        <div class=" shopchochocho pb-5 mb-3">
+                            <img class="banner-doc" src="{{ URL::asset('images/banner-left.png')}}" alt="Shop cho gà">
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row justify-content-center">
+                            @foreach($forchick as $fc)
+                            <div class="col-md-3 p-2 card-sp">
+                                <div class="card">
+                                    <a href="/{{$fc->link}}">
+                                    <img src="{{ URL::asset('images/'. $fc->image)}}" class="card-img-top p-2" alt="{{$fc->tittle}}">
+                                    </a>
+                                    <div class="card-body p-2">
+                                        <b class="card-title">{{$fc->tittle}}</b>
+
+
+                                        <div class="row justify-content-center gr-button">
+                                            @if($fc->category2()->count())
+
+                                            <h6 class="text-primary">{{$fc->category2->tittle}}</h6>
+
+                                            @endif
+                                            <div class="col">
+                                                <p class="card-text" style="margin-bottom:2px;color:#BBBBBB	;"><s>90,000
+                                                        vnđ</s></p>
+                                                <p class="card-text text-danger" style="font-weight:bolder;font-size:18px;">
+                                                    75,000 vnđ</p>
+                                            </div>
+                                            <div class="col"><button class="btn btn-danger">Giỏ hàng</button></div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                        </div>
     </section>
 
     <!-- section banner -->
@@ -312,24 +379,8 @@
                     </ul>
 
                 </div>
-                <div class="bg-warning shopchochocho pb-5 mb-3">
-                    <div class="shopchocho p-1" style="background-color:#DD0000;">
-                        <div class="row align-items-center">
-                            <div class="col-md-3">
-                                <img src="{{ URL::asset('images/Hinh-icon-cho-Shiba.jpg')}}"
-                                    style="object-fit: cover;width:100%" class="rounded-circle" alt="Sản phẩm lúa gạo">
-                            </div>
-                            <div class="col-md-9 text-white">
-                                <p class="mb-0">SẢN PHẨM LÚA GẠO</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <ul class="pt-3">
-                        <li><a href="">Gạo</a></li>
-                        <li><a href="">Nếp</a></li>
-                    </ul>
-
+                <div class=" shopchochocho pb-5 mb-3">
+                    <img class="banner-doc" src="{{ URL::asset('images/banner-left-gao.png')}}" alt="Sản phẩm lúa gạo">
                 </div>
             </div>
             <div class="col-md-10">
@@ -502,7 +553,7 @@
         </div>
     </div>
 
-    <section class="container-fluid justify-content-center d-flex align-items-center p-5 ">
+    <section class="container-fluid justify-content-center d-flex align-items-center p-5 blog">
         <div class="row justify-content-center pt-0 blog">
             <div class="col-md-6">
                 <div class="container">
@@ -573,13 +624,13 @@
 
     <section class="container-fluid justify-content-center d-flex align-items-center p-5 mt-5 video">
         <div class="row justify-content-center">
-            <div class="col-md-3 p-3">
+            <div class="col-md-4 p-3">
                 <video class="img-fluid w-100" controls>
                     <source src="{{URL::asset('images/dog.mp4')}}" type="video/mp4">
                 </video>
                 <p>Lorem chỉ đơn giản là một đoạn văn giả, được dùng vào việc trình bày</p>
             </div>
-            <div class="col-md-3 p-3">
+            <div class="col-md-4 p-3">
                 <video class="img-fluid w-100" controls>
                     <source src="{{URL::asset('images/dog.mp4')}}" type="video/mp4">
                 </video>

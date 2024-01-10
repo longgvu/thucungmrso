@@ -26,6 +26,7 @@ $banner = Banner::all();
 $new = Product::orderBy('created_at', 'desc')->take(5)->get();
         $fordog = Product::where('category_1_id',2)->take(8)->get();
         $forcat = Product::where('category_1_id',3)->take(8)->get();
+        $forchick = Product::where('category_1_id','1')->take(8)->get();
         $forrice = Product::where('category_1_id',6)->take(8)->get();
         $forfarm = Product::where('category_1_id', 5)->take(5)->get();
         $user_comment = User::all();
@@ -34,7 +35,7 @@ $new = Product::orderBy('created_at', 'desc')->take(5)->get();
         $comment = Comment::all();
         $blog = Blog::all()->take(2);
         $products = Product::all();
-        return view('pages.home', compact('new', 'fordog','forcat','forrice','forfarm','user','cart','category_1','category_2','banner','blog','comment','user_comment','products'));
+        return view('pages.home', compact('new', 'fordog','forcat','forchick','forrice','forfarm','user','cart','category_1','category_2','banner','blog','comment','user_comment','products'));
     }
 
     public function addToCart(Request $request, Product $product)
